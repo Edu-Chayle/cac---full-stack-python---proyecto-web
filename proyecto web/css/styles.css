@@ -1,0 +1,23 @@
+/* General */
+
+@import "reset.css";
+
+
+
+/* Móviles en horizontal o tablets en vertical */
+
+@media (min-width: 768px) {
+    
+}
+
+/* Tablets en horizonal y escritorios normales */
+
+@media (min-width: 1024px) {
+    
+}
+
+/* Escritorios muy anchos */
+
+@media (min-width: 1200px) {
+    
+}
