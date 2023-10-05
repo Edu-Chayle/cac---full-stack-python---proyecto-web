@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template: auto auto auto / auto auto;
+    grid-gap: 10px;
+    background-image: url("../img/running_16x9_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.headeritem {
+    background-color: rgb(23, 157, 235);
+    font-size: 20px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+
+
+section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background-color: rgba(245, 245, 245, 0.5);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: max-content;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+.titulo_info_titular,
+.fec_expiracion,
+.sel_tarjeta {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+input {
+    border-style: solid;
+}
+
+button {
+    border-radius: 1rem;
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.btn_enviar {
+    background-color: rgb(0, 110, 255);
+}
+
+.tarjeta_backend_desactiva {
+    visibility: hidden;
+}
+
+.tarjeta_backend_activa {
+    border: solid;
+    border-color: white;
+}
+
+.tarjeta_frontend {
+    border: solid;
+    border-color: white
+}
+
+.alerta_numero_tarjeta {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_desde_fecha {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_hasta_fecha {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_nom {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_ape {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_dni {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_ult_num {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_tipo_tarjeta {
+    visibility: hidden;
+    color: red
+}
+
+.alerta_tarifa_abonar {
+    visibility: hidden;
+    color: red
+}
+
+
+
+
+
+
+.footeritem {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Extra small devices (600px and down) */
+@media (max-width: 600px) {
+
+    .mainitem,
+    .headeritem,
+    ul,
+    form,
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+    }
+
+
+}
+
+/* Small devices (600px and up) */
+@media (min-width: 600px) {}
+
+/* Móviles en horizontal o tablets en vertical */
+
+@media (min-width: 768px) {}
+
+/* Tablets en horizonal y escritorios normales */
+
+@media (min-width: 1024px) {}
+
+/* Escritorios muy anchos */
+
+@media (min-width: 1200px) {}

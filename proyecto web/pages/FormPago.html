@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <!--style css-->
+    <link rel="stylesheet" type="text/css" href="../css/formpago.css">
+
+</head>
+
+<body>
+    <header class="headeritem">
+        <nav>
+            <ul>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                            <path
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                        </svg></a> </li>
+                <li><a>Inscripcion</a><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" />
+                    </svg></li>
+                <li> <a href="#">Kit sport</a><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 640 512">
+                        <style>
+                            svg {
+                                fill: #ff0000
+                            }
+                        </style>
+                        <path
+                            d="M211.8 0c7.8 0 14.3 5.7 16.7 13.2C240.8 51.9 277.1 80 320 80s79.2-28.1 91.5-66.8C413.9 5.7 420.4 0 428.2 0h12.6c22.5 0 44.2 7.9 61.5 22.3L628.5 127.4c6.6 5.5 10.7 13.5 11.4 22.1s-2.1 17.1-7.8 23.6l-56 64c-11.4 13.1-31.2 14.6-44.6 3.5L480 197.7V448c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64V197.7l-51.5 42.9c-13.3 11.1-33.1 9.6-44.6-3.5l-56-64c-5.7-6.5-8.5-15-7.8-23.6s4.8-16.6 11.4-22.1L137.7 22.3C155 7.9 176.7 0 199.2 0h12.6z" />
+                    </svg></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <img id="tfrontend" src="../img/Tfrontend.png" alt="tarjetafrontend" width="500" height="300"
+                class="tarjeta_frontend">
+            <img id="tback" src="../img/Tbackend.png" alt="tarjetabackend" width="500" height="300"
+                class="tarjeta_backend_desactiva">
+        </div>
+        <form name="form_pago" method="post" action="">
+            <label class="sel_tarjeta">SELECCIONAR TARJETA :</label>
+            <label for="tarjeta">Tipo de Tarjeta :</label>
+            <div>
+                <input type="radio" name="tarjeta" value="1">Crédito
+                <input type="radio" name="tarjeta" value="2">Débito
+                <label id="error_tipo_tarjeta" class="alerta_tipo_tarjeta">Debe seleccionar tipo de tarjeta</label>
+            </div>
+            <label>Seleccionar tarifa a abonar: </label>
+            <div>
+                <select name="precio">
+                    <option value="1">5K $5000</option>
+                    <option value="2">10K $10000</option>
+                    <option value="3">21K $20000</option>
+                </select>
+                <label id="error_tarifa_abonar" class="alerta_tarifa_abonar">Número inválido</label>
+            </div>
+            <label for="numero_tarjeta">Número de tarjeta:</label>
+            <div> <input type="number" id="num_tarjeta" name="numero_tarjeta">
+                <label id="error_num" class="alerta_numero_tarjeta">Número inválido</label>
+            </div>
+            <label class="fec_expiracion">FECHA DE VENCIMIENTO :</label>
+            <label for="fecha_desde">Desde:</label>
+            <div>
+                <input type="month" id="desde_fecha" value="12/2030" name="fecha_desde">
+                <label id="error_desde_fecha" class="alerta_desde_fecha">Número inválido</label>
+            </div>
+            <label for="fecha_hasta">Hasta:</label>
+            <div>
+                <input type="month" id="hasta_fecha" value="12/2030" name="fecha_hasta">
+                <label id="error_hasta_fecha" class="alerta_hasta_fecha">Número inválido</label>
+            </div>
+            <label for="nombre">Codigo CVV:</label>
+            <div>
+                <input type="number" onkeypress="mostrartarjeta()" id="ult_num">
+                <label id="error_ult_num" class="alerta_ult_num">Número inválido</label>
+            </div>
+            <label class="titulo_info_titular">INFORMACIÓN DEL TITULAR DE LA TARJETA</label>
+            <label for="nombre">Nombre:</label>
+            <div>
+                <input type="text" name="nombre" id="nom">
+                <label id="error_nom" class="alerta_nom">Nombre inválido</label>
+            </div>
+            <label for="apellido">Apellido:</label>
+            <div>
+                <input type="text" name="apellido" id="ape">
+                <label id="error_ape" class="alerta_ape">Apellido inválido</label>
+            </div>
+            <label for="dni">Dni:</label>
+            <div>
+                <input type="number" name="dni" id="dni">
+                <label id="error_dni" class="alerta_dni">Número inválido</label>
+            </div>
+            <div>
+                <button type="submit" class="btn_enviar" id="btnenviar">Enviar</button>
+                <button type="reset" class="btn_borrar" onclick="resetear()">Borrar</button>
+            </div>
+        </form>
+    </section>
+    <footer class="footeritem">
+        <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                    <path
+                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                </svg></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                    <path
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                </svg></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                    <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                </svg></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                    <path
+                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                </svg></li>
+        </ul>
+    </footer>
+    <!--javascript-->
+    <script src="../js/jspago.js"></script>
+</body>
+
+</html>
