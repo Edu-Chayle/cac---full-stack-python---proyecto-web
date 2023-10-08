@@ -19,7 +19,7 @@ html {
 .header-i {
     min-height: 50px;
     width: 100%;
-    background-color: #37af65;
+    background-color: #399aa1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +45,7 @@ html {
     font-size: 0.8rem;
     min-height: 50px;
     width: 100%;
-    background-color: #37af65;
+    background-color: #399aa1;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ html {
     color: #ffffff;
 }
 
-/* 2. Page inscripcion */
+/* 2. Page: Inscripcion */
 
 .body-i {
     font-family: Quicksand, sans-serif;
@@ -77,13 +77,14 @@ html {
     margin: 10px 15px;
     padding: 5px 10px 10px;
     max-width: 500px;
-    color: #37af65;
+    color: black;
 }
 
 .h2-i {
     font-size: 1.25rem;
     font-weight: bold;
     margin: 18px 0;
+    color: #399aa1;
 }
 
 .label-i {
@@ -93,9 +94,9 @@ html {
 .input-i, .select-i {
     width: 100%;
     margin: 5px 0 10px;
-    color: #37af65;
+    color: #399aa1;
     border-radius: 5px;
-    border: 2.6px solid #37af65;
+    border: 2.6px solid #399aa1;
 }
 
 .input-i:focus, .select-i:focus {
@@ -104,6 +105,7 @@ html {
 
 .select-i {
     padding: 1px 0;
+    background-color: #ffffff;
 }
 
 .p-i {
@@ -122,7 +124,7 @@ html {
 
 input[type="submit"] {
     color: #ffffff;
-    background-color: #37af65;
+    background-color: #399aa1;
     cursor: pointer;
 }
 
