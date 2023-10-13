@@ -21,15 +21,15 @@
                 </ul>
             </nav>
         </header>
-        <form class="form-i" action="resultado-inscripcion">
+        <form id="formulario-inscripcion" class="form-i" action="resultado-inscripcion" method="get">
             <div class="div-i">
                 <h2 class="h2-i">Información personal</h2>
                 <label class="label-i" for="input-nombre">Nombre: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-nombre" name="nombre">
+                <input id="input-nombre" class="input-i" type="text" name="nombre">
                 <label class="label-i" for="input-apellido">Apellido: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-apellido" name="apellido">
+                <input id="input-apellido" class="input-i" type="text" name="apellido">
                 <label class="label-i" for="input-edad">Edad: <span class="span-i">*</span></label>
-                <input class="input-i" type="number" id="input-edad" name="edad" min="18" max="99">
+                <input id="input-edad" class="input-i" type="text" name="edad">
                 <label class="label-i" for="select-genero">Género: <span class="span-i">*</span></label>
                 <select id="select-genero" class="select-i" name="genero">
                     <option value="" selected="">Seleccione un género</option>
@@ -38,13 +38,14 @@
                 </select>
                 <label class="label-i" for="select-nacionalidad">Nacionalidad: <span class="span-i">*</span></label>
                 <select id="select-nacionalidad" class="select-i" name="nacionalidad">
+                    <option value="" selected="">Seleccione una nacionalidad</option>
                     <option value="1">Afghanistan</option>
                     <option value="2">Albania</option>
                     <option value="3">Algeria</option>
                     <option value="4">Andorra</option>
                     <option value="5">Angola</option>
                     <option value="6">Antigua and Barbuda</option>
-                    <option value="7" selected="">Argentina</option>
+                    <option value="7">Argentina</option>
                     <option value="8">Armenia</option>
                     <option value="9">Australia</option>
                     <option value="10">Austria</option>
@@ -234,24 +235,25 @@
                     <option value="194">Zimbabwe</option>
                 </select>
                 <label class="label-i" for="select-tipo-documento">Tipo de documento: <span class="span-i">*</span></label>
-                <select id="select-tipo-documento" class="select-i" name="tipo-documento">
+                <select id="select-tipo-documento" class="select-i" name="tipoDocumento">
+                    <option value="" selected="">Seleccione un tipo de documento</option>
                     <option value="P">PAS</option>
-                    <option value="D" selected="">DNI</option>
+                    <option value="D">DNI</option>
                 </select>
                 <label class="label-i" for="input-numero-documento">Número de documento: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-numero-documento" name="numero-documento" maxlength="9">
+                <input id="input-numero-documento" class="input-i" type="text" name="numeroDocumento">
                 <label class="label-i" for="input-telefono">Teléfono: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-telefono" name="telefono" maxlength="20">
+                <input id="input-telefono" class="input-i" type="text" name="telefono">
                 <p class="p-i">Número de celular: Sin 0 el código de área y sin 15 el número.</p>
                 <label class="label-i" for="input-cobertura-medica">Cobertura médica: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-cobertura-medica" name="cobertura-medica">
+                <input id="input-cobertura-medica" class="input-i" type="text" name="coberturaMedica">
             </div>
             <div class="div-i">
                 <h2 class="h2-i">Contacto de emergencia</h2>
                 <label class="label-i" for="input-nombre-contacto">Nombre del contacto: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-nombre-contacto" name="nombre-contacto">
+                <input id="input-nombre-contacto" class="input-i" type="text" name="nombreContacto">
                 <label class="label-i" for="input-telefono-contacto">Teléfono del contacto: <span class="span-i">*</span></label>
-                <input class="input-i" type="text" id="input-telefono-contacto" name="telefono-contacto" maxlength="20">
+                <input id="input-telefono-contacto" class="input-i" type="text" name="telefonoContacto">
                 <p class="p-i">Número de celular: Sin 0 el código de área y sin 15 el número.</p>
                 <h2 class="h2-i">Inscripción</h2>
                 <label class="label-i" for="input-distancia">Distancia: <span class="span-i">*</span></label>
@@ -265,7 +267,7 @@
                     <p class="nota-i">Nota: El día del evento deberá presentar el certificado médico de aptitud física de lo contrario no podrá participar del mismo, para más información ver los términos y condiciones.</p>
                     <p class="nota-i"><span class="span-i">*</span> Campos obligatorios.</p>
                 </div>
-                <input class="input-i" type="submit" value="INSCRIBIR">
+                <input class="input-i" type="submit" value="SIGUIENTE">
             </div>
         </form>
         <footer class="footer-i">
@@ -275,7 +277,8 @@
                 <a href="https://www.twitter.com" target="_blank"><i class ="fa fa-twitter" aria-hidden="true"></i></a>
             </div>
             <p>© copyright 2023</p>
-            <p>Developer by Team 28</p>
+            <p>Developer by Team One</p>
         </footer>
+        <script src="../js/validacionInscripcion.js"></script>
     </body>
 </html>
