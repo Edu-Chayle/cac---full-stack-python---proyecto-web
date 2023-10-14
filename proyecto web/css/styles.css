@@ -17,9 +17,13 @@ html {
 /* General: Header */
 
 .header-i {
-    min-height: 50px;
+    height: 58px;
     width: 100%;
-    background-color: #399aa1;
+    background-color: #333333;
+}
+
+.logo-y-nav-i {
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,13 +43,19 @@ html {
     color: orange;
 }
 
+.band-i {
+    height: 8px;
+    width: 100%;
+    background-color: #399aa1;
+}
+
 /* General: Footer */
 
 .footer-i {
     font-size: 0.8rem;
-    min-height: 50px;
+    height: 50px;
     width: 100%;
-    background-color: #399aa1;
+    background-color: #333333;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -77,7 +87,7 @@ html {
     margin: 10px 15px;
     padding: 5px 10px 10px;
     max-width: 500px;
-    color: black;
+    color: #333333;
 }
 
 .h2-i {
@@ -135,8 +145,16 @@ input[type="submit"] {
         font-size: 1.25rem;
     }
 
-    .header-i, .footer-i {
+    .header-i {
+        min-height: 80px;
+    }
+
+    .logo-y-nav-i, .footer-i {
         min-height: 70px;
+    }
+
+    .band-i {
+        height: 10px;
     }
 
     .form-i {
@@ -152,6 +170,11 @@ input[type="submit"] {
     .header-i {
         position: fixed;
         top: 0;
+    }
+
+    .band-i {
+        position: fixed;
+        top: 70px;
     }
 
     .form-i {
