@@ -29,6 +29,10 @@ html {
     justify-content: space-between;
 }
 
+.header-logo {
+    margin-left: 10px;
+}
+
 .nav-i li {
     float: left;
     margin: 0 10px 0;
