@@ -9,22 +9,8 @@
         <script src="https://kit.fontawesome.com/91669f9d31.js" crossorigin="anonymous"></script>
     </head>
     <body class="body-i">
-        <header class="header-i">
-            <div class="logo-y-nav-i">
-                <div class="header-logo">
-                    <a href="../index.html"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
-                </div>
-                <nav class="nav-i">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="inscripcion.html">Inscripción</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="band-i"></div>
-        </header>
-        <form id="formulario-inscripcion" class="form-i" action="resultado-inscripcion" method="get">
+        <header id="header" class="header-i"></header>
+        <form id="formulario-inscripcion" class="form-i" action="resultado-inscripcion" method="post">
             <div class="div-i">
                 <h2 class="h2-i">Información personal</h2>
                 <label class="label-i" for="input-nombre">Nombre: <span class="span-i">*</span></label>
@@ -273,15 +259,8 @@
                 <input class="input-i" type="submit" value="SIGUIENTE">
             </div>
         </form>
-        <footer class="footer-i">
-            <div>
-                <a href="https://www.facebook.com" target="_blank"><i class ="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href=" https://www.instagram.com" target="_blank "><i class ="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class ="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-            <p>© copyright 2023</p>
-            <p>Developer by Team One</p>
-        </footer>
-        <script src="../js/index.js"></script>
+        <footer id="footer" class="footer-i"></footer>
+        <script src="../js/headerYFooter.js"></script>
+        <script src="../js/validacionInscripcion.js"></script>
     </body>
 </html>

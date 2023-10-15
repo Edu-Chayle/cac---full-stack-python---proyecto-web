@@ -24,13 +24,13 @@ const mensajesDeAyuda = {
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
-    if (validarFormulario(evento)) {
+    if (validarFormulario()) {
         formulario.submit();
         window.location.href = "../pages/stockIT.html";
     }
 });
 
-const validarFormulario = (evento) => {
+function validarFormulario() {
     let esValido = true;
 
     for (const input of inputs) {

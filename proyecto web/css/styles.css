@@ -29,8 +29,48 @@ html {
     justify-content: space-between;
 }
 
-.header-logo {
+.header-logo-i {
     margin-left: 10px;
+    flex: 1;
+}
+
+.header-arrows-i label {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.input-menu-i {
+    display: none;
+}
+
+.input-menu-i:checked ~ .nav-list-i {
+    transform: translateX(0);
+}
+
+.nav-list-i ul {
+    margin: 10px 0;
+}
+
+.nav-list-i {
+    width: 100%;
+    top: 58px;
+    background-color: #333333;
+    position: absolute;
+    transform: translateX(100%);
+    transition: all 500ms ease;
+}
+
+.nav-list-i a {
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list-i a:hover {
+    color: orange;
 }
 
 .nav-i li {
@@ -68,7 +108,7 @@ html {
 }
 
 .footer-i a {
-    margin: 0 2.5px;
+    margin: 0 7.5px;
 }
 
 .fa {
