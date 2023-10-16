@@ -1,23 +1,192 @@
 /* General */
 
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
+* {
+    font-family: Quicksand, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 1rem;
+}
 
-/* Móviles en horizontal o tablets en vertical */
+/* General: Header */
+
+.header-i {
+    min-height: 50px;
+    width: 100%;
+    background-color: #37af65;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-i li {
+    float: left;
+    margin: 0 10px 0;
+}
+
+.nav-i a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-i a:hover {
+    color: orange;
+}
+
+/* General: Footer */
+
+.footer-i {
+    font-size: 0.8rem;
+    min-height: 50px;
+    width: 100%;
+    background-color: #37af65;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-i a {
+    margin: 0 2.5px;
+}
+
+.fa {
+    color: #ffffff;
+}
+
+/* 2. Page inscripcion */
+
+.body-i {
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2.1 Form */
+
+.form-i {
+    margin: 10px 15px;
+    padding: 5px 10px 10px;
+    max-width: 500px;
+    color: #37af65;
+}
+
+.h2-i {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+.label-i {
+    font-weight: 700;
+}
+
+.input-i, .select-i {
+    width: 100%;
+    margin: 5px 0 10px;
+    color: #37af65;
+    border-radius: 5px;
+    border: 2.6px solid #37af65;
+}
+
+.input-i:focus, .select-i:focus {
+    outline-color: orange;
+}
+
+.select-i {
+    padding: 1px 0;
+}
+
+.p-i {
+    font-size: 0.8rem;
+    margin: -5px 0 10px 0;
+}
+
+.nota-i {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.span-i {
+    color: red;
+}
+
+input[type="submit"] {
+    color: #ffffff;
+    background-color: #37af65;
+    cursor: pointer;
+}
+
+/* Responsive design */
 
 @media (min-width: 768px) {
-    
-}
+    html {
+        font-size: 1.25rem;
+    }
 
-/* Tablets en horizonal y escritorios normales */
+    .header-i, .footer-i {
+        min-height: 70px;
+    }
+
+    .form-i {
+        max-width: 600px;
+    }
+}    
 
 @media (min-width: 1024px) {
-    
-}
+    .body-i {
+        min-height: 100vh;
+        justify-content: center;
+    }
 
-/* Escritorios muy anchos */
+    .header-i {
+        position: fixed;
+        top: 0;
+    }
 
-@media (min-width: 1200px) {
-    
+    .form-i {
+        padding: 5px 10px 17px;
+        min-width: 1000px;
+        max-width: 1280px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .div-i {
+        width: 50%;
+        margin: 0 40px;
+    }
+
+    .input-i {
+        padding: 5px 0;
+    }
+
+    .select-i {
+        padding: 6px 0;
+    }
+
+    .container-nota-i {
+        height: 327px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-nota-i > p {
+        margin-bottom: 30px;
+    }
+
+    .footer-i {
+        position: fixed;
+        bottom: 0;
+    }
 }
