@@ -44,9 +44,6 @@ const footerContent = `
 <p>Developer by Team One</p>
 `;
 
-window.addEventListener("load", actualizarHeader);
-window.addEventListener("resize", actualizarHeader);
-
 function actualizarHeader() {
     if (window.innerWidth < 375) {
         document.getElementById("header").innerHTML = smallHeaderContent;
@@ -54,5 +51,8 @@ function actualizarHeader() {
         document.getElementById("header").innerHTML = largeHeaderContent;
     }
 }
+
+window.addEventListener("load", actualizarHeader);
+window.addEventListener("resize", actualizarHeader);
 
 document.getElementById("footer").innerHTML = footerContent;

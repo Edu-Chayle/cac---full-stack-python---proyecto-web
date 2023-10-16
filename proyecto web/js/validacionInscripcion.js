@@ -21,20 +21,22 @@ const mensajesDeAyuda = {
     telefonoContacto: "Ingrese el teléfono de su contacto"
 };
 
-formulario.addEventListener("submit", (evento) => {
-    evento.preventDefault();
-
-    if (validarFormulario()) {
-        formulario.submit();
-        window.location.href = "../pages/stockIT.html";
-    }
-});
-
 function validarFormulario() {
     let esValido = true;
 
     for (const input of inputs) {
         const contenidoInput = input.value.trim();
+
+        function validarElemento (expresion) {
+            if (!expresion.test(contenidoInput)) {
+                input.classList.add("input-error");
+                input.setAttribute("placeholder", mensajesDeAyuda[input.name]);
+                esValido = false;
+            } else {
+                input.classList.remove("input-error");
+                input.removeAttribute("placeholder");
+            }
+        }
 
         if (input.name === "nombre" || input.name === "apellido" || 
             input.name === "coberturaMedica" || input.name === "nombreContacto") {
@@ -57,17 +59,6 @@ function validarFormulario() {
 
         if (input.name === "telefono" || input.name === "telefonoContacto") {
             validarElemento(expresiones.telefonos);
-        }
-
-        function validarElemento (expresion) {
-            if (!expresion.test(contenidoInput)) {
-                input.classList.add("input-error");
-                input.setAttribute("placeholder", mensajesDeAyuda[input.name]);
-                esValido = false;
-            } else {
-                input.classList.remove("input-error");
-                input.removeAttribute("placeholder");
-            }
         }
 
         input.addEventListener("input", () => {
@@ -102,3 +93,12 @@ function validarFormulario() {
 
     return esValido;
 }
+
+formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+    if (validarFormulario()) {
+        formulario.submit();
+        window.location.href = "../pages/stockIT.html";
+    }
+});

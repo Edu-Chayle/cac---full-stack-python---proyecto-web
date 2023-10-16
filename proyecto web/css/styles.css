@@ -46,7 +46,7 @@ html {
 }
 
 .input-menu-i:checked ~ .nav-list-i {
-    transform: translateX(0);
+    display: block;
 }
 
 .nav-list-i ul {
@@ -54,12 +54,11 @@ html {
 }
 
 .nav-list-i {
+    display: none;
     width: 100%;
     top: 58px;
     background-color: #333333;
     position: absolute;
-    transform: translateX(100%);
-    transition: all 500ms ease;
 }
 
 .nav-list-i a {
