@@ -20,6 +20,7 @@ html {
     height: 58px;
     width: 100%;
     background-color: #333333;
+    z-index: 1;
 }
 
 .logo-y-nav-i {
@@ -46,19 +47,21 @@ html {
 }
 
 .input-menu-i:checked ~ .nav-list-i {
-    display: block;
-}
-
-.nav-list-i ul {
-    margin: 10px 0;
+    transform: translateY(0);
 }
 
 .nav-list-i {
-    display: none;
     width: 100%;
     top: 58px;
     background-color: #333333;
     position: absolute;
+    transform: translateY(-100%);
+    transition: all 500ms ease;
+    z-index: -1;
+}
+
+.nav-list-i ul {
+    margin: 10px 0;
 }
 
 .nav-list-i a {
