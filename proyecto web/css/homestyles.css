@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
-/* Reset de margen y padding para todos los elementos */
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +9,10 @@
     vertical-align: baseline;
 }
 
-/* Mostrar elementos semánticos como bloques */
 article, footer, header, menu, nav, section {
     display: block;
 }
 
-/* Estilos básicos para el cuerpo */
 body {
     background: #f7f7f7;
     color: #474747;
@@ -25,12 +22,12 @@ body {
     line-height: 1.65em;
 }
 
-/* Margen inferior para párrafos y listas */
+
 p, ul, ol {
     margin: 0 0 2em 0;
 }
 
-/* Estilos para títulos */
+
 h1, h2, h3, h4, h5, h6 {
     color: inherit;
     font-weight: 600;
@@ -48,7 +45,7 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
     font-weight: 300;
 }
 
-/* Estilos específicos para títulos */
+
 h2 {
     font-size: 1.75em;
     letter-spacing: -0.025em;
@@ -95,7 +92,7 @@ h3 {
     }
 }
 
-/* Definición de variables para los anchos */
+
 :root {
     --col-width: 8.33333%;
     --off-width: 8.33333%;
@@ -103,7 +100,6 @@ h3 {
     --max-width: 100%;
 }
 
-/* Estilos base para .row */
 .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -118,7 +114,6 @@ h3 {
     text-align: left;
   }
     
-  /* Media queries para diferentes tamaños de pantalla */
   @media screen and (max-width: 1680px) {
     :root {
       --col-width: 16.66667%;
@@ -167,9 +162,6 @@ h3 {
     }
   }
   
-
-/* Image */
-
 .image {
     border: 0;
     display: inline-block;
@@ -185,9 +177,6 @@ h3 {
         position: relative;
         top: 0.25em;
     }
-
-
-/* Icon */
 
 .icon {
     text-decoration: none;
@@ -242,7 +231,6 @@ h3 {
             font-size: 36px;
         }
 
-/* List Styles */
 ol {
     list-style: decimal;
     padding-left: 1.25em;
@@ -321,8 +309,6 @@ ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
 .box.post .image {
     width: 20%;
 }
-
-/* Wrapper */
 
 .wrapper {
     padding: 3em 0 3em 0;
@@ -460,8 +446,6 @@ ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
     display: none;
 }
 
-/*Button*/
-
 .button {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -495,10 +479,6 @@ ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
 .button.brands {
     font-family: 'Font Awesome 5 Brands';
 }
-
-/*Box*/
-
-/* Box */
 .box {
     text-align: center;
 }
@@ -528,9 +508,6 @@ ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
 .box.post .image {
     width: 20%;
 }
-
-/* CTA */
-
 #cta {
     text-align: center;
     padding: 3.5em 0;
@@ -547,54 +524,16 @@ ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
     margin-left: 1em;
 }
 
-/* Footer */
-
-#footer {
-    padding: 4em 3em 8em 3em;
-}
-
-#footer a {
-    color: inherit;
-    border-bottom-color: rgba(71, 71, 71, 0.25);
-}
-
-#footer a:hover {
-    color: #399aa1;
-    border-bottom-color: transparent;
-}
-
 #footer .container {
     margin-bottom: 4em 0 8em 3em;
     text-align: center;
 }
 
-#footer .icons {
-    text-align: center;
-    margin: 0;
-}
-
-#footer .icons a {
-    color: #999;
-}
-
-#footer .icons a:hover {
-    color: #474747;
-}
-
-#footer .copyright {
-    color: #999;
-    margin-top: 1.5em;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-/* Estilos Generales */
 body, input, select, textarea {
     font-size: 14pt;
     line-height: 1.5em;
 }
 
-/* Media Queries */
 @media screen and (max-width: 1680px) {
     #banner {
         height: 24em;
@@ -604,9 +543,8 @@ body, input, select, textarea {
 @media screen and (max-width: 1280px) {
     body, input, select, textarea {
         font-size: 13pt;
-
-
     }
+    
     ol {
         padding-left: 1.25em;
     }
@@ -859,5 +797,3 @@ body, input, select, textarea {
     margin: 0.5em 0 0 0;
   }
 }
-
-
