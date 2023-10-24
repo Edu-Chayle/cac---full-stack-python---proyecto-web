@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/running_16x9_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.headeritem {
+    display: flex;
+    background-color: #46bac2;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+ul {
+    display: flex;
+    margin: 1rem;
+    list-style: none;
+}
+
+li {
+    margin: 0 10px 0;
+}
+
+
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-start: 3;
+    background-color: rgba(245, 245, 245, 0.699);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.items-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form,
+select {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: max-content;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+.titulo_info_titular,
+.fec_expiracion,
+.sel_tarjeta,
+.total_abonar {
+    color: blue;
+    width: max-content;
+}
+
+
+input {
+    border-style: solid;
+    border-radius: 5px;
+}
+
+button {
+    border-radius: 1rem;
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.btn_enviar {
+    background-color: rgb(0, 110, 255);
+    color: black;
+}
+
+.btn_borrar {
+    color: black;
+}
+
+.tarjeta_backend_desactiva {
+    visibility: hidden;
+}
+
+.tarjeta_backend_activa {
+    border: solid;
+    border-color: white;
+}
+
+.tarjeta_frontend {
+    border: solid;
+    border-color: white
+}
+
+.alerta_numero_tarjeta {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_desde_fecha {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_hasta_fecha {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_nom {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_ape {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_dni {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_ult_num {
+    visibility: hidden;
+    color: red;
+}
+
+.alerta_tipo_tarjeta {
+    visibility: hidden;
+    color: red
+}
+
+.alerta_tarifa_abonar {
+    visibility: hidden;
+    color: red
+}
+
+.alerta_select {
+    visibility: hidden;
+    color: red
+}
+
+
+
+.footeritem {
+    display: flex;
+    justify-content: center;
+    background-color: #37af65;
+    color: #ffffff;
+}
+
+
+
+/* Extra small devices (600px and down) */
+@media (max-width: 600px) {
+
+    .mainitem,
+    .headeritem,
+    ul,
+    li,
+    a,
+    form,
+    section,
+    .footeritem {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+    }
+
+    .titulo_info_titular,
+    .fec_expiracion,
+    .sel_tarjeta,
+    .total_abonar,
+    label,
+    button {
+        font-size: 1rem;
+        color: blue;
+        width: max-content;
+    }
+
+    img {
+        width: 70%;
+        height: 50%;
+    }
+
+    svg {
+        width: 20%;
+        height: 30%;
+    }
+
+
+}
+
+/* Small devices (600px and up) */
+@media (min-width: 600px) {
+    img {
+        width: 70%;
+        height: 50%;
+    }
+}
+
+/* Móviles en horizontal o tablets en vertical */
+
+@media (min-width: 768px) {}
+
+/* Tablets en horizonal y escritorios normales */
+
+@media (min-width: 1024px) {}
+
+/* Escritorios muy anchos */
+
+@media (min-width: 1200px) {}
