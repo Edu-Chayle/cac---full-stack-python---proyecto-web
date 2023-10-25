@@ -7,15 +7,117 @@
     font-family: Quicksand, sans-serif;
 }
 
+/* General: Header */
+
+.header-i {
+    height: 58px;
+    width: 100%;
+    background-color: #333333;
+    z-index: 1;
+}
+
+.logo-y-nav-i {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo-i {
+    margin-left: 10px;
+    flex: 1;
+}
+
+.header-arrows-i label {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.input-menu-i {
+    display: none;
+}
+
+.input-menu-i:checked ~ .nav-list-i {
+    transform: translateY(0);
+}
+
+.nav-list-i {
+    width: 100%;
+    top: 58px;
+    background-color: #333333;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: all 500ms ease;
+    z-index: -1;
+}
+
+.nav-list-i ul {
+    margin: 10px 0;
+}
+
+.nav-list-i a {
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list-i a:hover {
+    color: orange;
+}
+
+.nav-i li {
+    float: left;
+    margin: 0 10px 0;
+}
+
+.nav-i a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-i a:hover {
+    color: orange;
+}
+
+.band-i {
+    height: 8px;
+    width: 100%;
+    background-color: #399aa1;
+}
+
+/* General: Footer */
+
+.footer-i {
+    font-size: 0.8rem;
+    height: 50px;
+    width: 100%;
+    background-color: #333333;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-i a {
+    margin: 0 7.5px;
+}
+
+.fa {
+    color: #ffffff;
+}
+
 body {
     display: flex;
     flex-direction: column;
     background-image: url("../img/running_16x9_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
-
+/*
 .headeritem {
     display: flex;
     background-color: #46bac2;
@@ -23,9 +125,6 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
-
-
 
 ul {
     display: flex;
@@ -35,9 +134,7 @@ ul {
 
 li {
     margin: 0 10px 0;
-}
-
-
+}*/
 
 section {
     display: grid;
@@ -161,23 +258,22 @@ button {
 }
 
 
-
+/*
 .footeritem {
     display: flex;
     justify-content: center;
     background-color: #37af65;
     color: #ffffff;
-}
+}*/
 
 
 
 /* Extra small devices (600px and down) */
+
 @media (max-width: 600px) {
 
     .mainitem,
     .headeritem,
-    ul,
-    li,
     a,
     form,
     section,
@@ -199,7 +295,7 @@ button {
         width: max-content;
     }
 
-    img {
+    #tfrontend, #tback {
         width: 70%;
         height: 50%;
     }
@@ -214,7 +310,7 @@ button {
 
 /* Small devices (600px and up) */
 @media (min-width: 600px) {
-    img {
+    #tfrontend, #tback {
         width: 70%;
         height: 50%;
     }
