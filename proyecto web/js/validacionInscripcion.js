@@ -99,6 +99,6 @@ formulario.addEventListener("submit", (evento) => {
 
     if (validarFormulario()) {
         formulario.submit();
-        window.location.href = "../pages/stockIT.html";
+        window.location.href = "../pages/stockit.html";
     }
 });
