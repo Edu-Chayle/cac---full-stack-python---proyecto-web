@@ -341,25 +341,13 @@ h3 {
 .button.brands {
     font-family: 'Font Awesome 5 Brands';
 }
-/*
-.box.highlight {
-    text-align: left;
-    position: center;
-    padding-left: 7em;
-}
-*/
+
 .box.highlight i {
     position: absolute;
     margin: 0;
     left: 0;
     top: 0.25em;
 }
-/*
-.box.post {
-    position: relative;
-    margin: 0 0 2em 0;
-}
-*/
 .box.post .inner {
     margin-left: 2em;
 }
