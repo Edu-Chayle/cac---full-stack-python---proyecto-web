@@ -14,31 +14,72 @@
     </head>
     <body 
      <h2><em>HOMBRE</em></h2> 
-    <div class="links-container">
-        <a href="img/kitmasc.jpg"  link" target="_blank">XXL - Extra Grande</a>
-        <br>
-        <a href="img/kitmasc.jpg"  link" target="_blank">XL -Grande</a>
-        <br>
-        <a href="img/kitmasc.jpg"  link" target="_blank">L - Large</a>
-        <br>
-        <a href= "img/kitmasc.jpg"  link" target="_blank">M - Medium</a>
-        <br>
-        <a href="img/kitmasc.jpg"  link" target="_blank">S - Small</a>
-        <br>
-      </div>
+        <title>Elige tu kit</title>
+  <script>
+    function validarFormulario() {
+      var seleccionado = document.querySelector('input[name="talle"]:checked');
+      if (seleccionado) {
+        alert("Has elegido el kit de ropa en el tamaño: " + seleccionado.value);
+      } else {
+        alert("Por favor, selecciona un tamaño");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2> kits </h2>
+  
+  <form onsubmit="event.preventDefault(); validarFormulario();">
+    <h3>Selecciona un tamaño:</h3>
+    
+    <input type="radio" id="talleS" name="talle" value="S" <a href="img/kitmasc.jpg"  link" target="_blank">S - Small</a>>
+    <label for="talleS">Talle S</label><br>
 
-      <H2><em>MUJER</em></H2>
-      <div class="links-container">
-        <a href="img/kitfem.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">XXL - Extra Grande</a>
-        <br>
-        <a href="img/kitfem.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">XL -Grande</a>
-        <br>
-        <a href="img/kitfem.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">L - Large</a>
-        <br>
-        <a href= "img/kitfem.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">M - Medium</a>
-        <br>
-        <a href="img/kitfem.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">S - Small</a>
-        <br>
-      </div> 
+    <input type="radio" id="talleM" name="talle" value="M" <a href= "img/kitmasc.jpg"  link" target="_blank">M - Medium</a>>
+    <label for="talleM">Talle M</label><br>
+
+    <input type="radio" id="talleL" name="talle" value="L"  <a href="img/kitmasc.jpg"  link" target="_blank">L - Large</a>>
+    <label for="talleL">Talle L</label><br>
+
+    <input type="radio" id="talleXL" name="talle" value="XL 
+        <a href="img/kitmasc.jpg"  link" target="_blank">XL -Grande</a>">
+    <label for="talleXL">Talle XL</label><br>
+
+    <button type="submit">Enviar</button>
+       <h2><em>MUJER</em></h2> 
+        <title>Elige tu kit</title>
+  <script>
+    function validarFormulario() {
+      var seleccionado = document.querySelector('input[name="talle"]:checked');
+      if (seleccionado) {
+        alert("Has elegido el kit de ropa en el tamaño: " + seleccionado.value);
+      } else {
+        alert("Por favor, selecciona un tamaño");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2> kits </h2>
+  
+  <form onsubmit="event.preventDefault(); validarFormulario();">
+    <h3>Selecciona un tamaño:</h3>
+    
+    <input type="radio" id="talleS" name="talle" value="S"  <a href="img/kitfem.jpg"  link" target="_blank">S - Small</a>
+    <label for="talleS">Talle S</label><br>
+
+    <input type="radio" id="talleM" name="talle" value="M" <a href= "img/kitfem.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">M - Medium</a>
+    <label for="talleM">Talle M</label><br>
+
+    <input type="radio" id="talleL" name="talle" value="L"  <a href="img/kitfem.jpg"  link" target="_blank">L - Large</a>
+    <label for="talleL">Talle L</label><br>
+
+    <input type="radio" id="talleXL" name="talle" value="XL <a href="img/kitfem.jpg"  link" target="_blank">XL -Grande</a>">
+    <label for="talleXL">Talle XL</label><br>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+       
     </body>
 </html>
