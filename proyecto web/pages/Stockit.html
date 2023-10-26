@@ -7,35 +7,58 @@
         <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/styleStockit.css">
         <script src="https://kit.fontawesome.com/91669f9d31.js" crossorigin="anonymous"></script>
+        <script>
+          function validarFormulario() {
+            var seleccionado = document.querySelector('input[name="talle"]:checked');
+            if (seleccionado) {
+              alert("Has elegido el kit de ropa en el tamaño: " + seleccionado.value);
+            } else {
+              alert("Por favor, selecciona un tamaño");
+            }
+          }
+        </script>
     </head>
     <body>
         <header id="header" class="header-i"></header>
-        <h2><em>HOMBRE</em></h2> 
-        <div class="links-container">
-            <a href="img/img2.jpg"  target="_blank">XXL - Extra Grande</a>
-            <br>
-            <a href="img/img2.jpg"  target="_blank">XL -Grande</a>
-            <br>
-            <a href="img/img2.jpg"  target="_blank">L - Large</a>
-            <br>
-            <a href= "img/img2.jpg"  target="_blank">M - Medium</a>
-            <br>
-            <a href="img/img2.jpg"  target="_blank">S - Small</a>
-            <br>
-        </div>
-        <H2><em>MUJER</em></H2>
-        <div class="links-container">
-            <a href="img/img3.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">XXL - Extra Grande</a>
-            <br>
-            <a href="img/img3.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">XL -Grande</a>
-            <br>
-            <a href="img/img3.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">L - Large</a>
-            <br>
-            <a href= "img/img3.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">M - Medium</a>
-            <br>
-            <a href="img/img3.jpg" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">S - Small</a>
-            <br>
-        </div>
+        <h2><em>HOMBRE</em></h2>
+        <h2> kits </h2>
+  
+  <form onsubmit="event.preventDefault(); validarFormulario();">
+    <h3>Selecciona un tamaño:</h3>
+    
+    <input type="radio" id="talleS" name="talle" value="S" <a href="img/kitmasc.jpg"  link" target="_blank">S - Small</a>>
+    <label for="talleS">Talle S</label><br>
+
+    <input type="radio" id="talleM" name="talle" value="M" <a href= "img/kitmasc.jpg"  link" target="_blank">M - Medium</a>>
+    <label for="talleM">Talle M</label><br>
+
+    <input type="radio" id="talleL" name="talle" value="L"  <a href="img/kitmasc.jpg"  link" target="_blank">L - Large</a>>
+    <label for="talleL">Talle L</label><br>
+
+    <input type="radio" id="talleXL" name="talle" value="XL 
+        <a href="img/kitmasc.jpg"  link" target="_blank">XL -Grande</a>">
+    <label for="talleXL">Talle XL</label><br>
+
+    <button type="submit">Enviar</button>
+
+    <form onsubmit="event.preventDefault(); validarFormulario();">
+      <h3>Selecciona un tamaño:</h3>
+      
+      <input type="radio" id="talleS" name="talle" value="S"  <a href="img/kitfem.jpg"  link" target="_blank">S - Small</a>
+      <label for="talleS">Talle S</label><br>
+  
+      <input type="radio" id="talleM" name="talle" value="M" <a href= "img/kitfem.jpg" link" target="_blank">M - Medium</a>
+      <label for="talleM">Talle M</label><br>
+  
+      <input type="radio" id="talleL" name="talle" value="L"  <a href="img/kitfem.jpg"  link" target="_blank">L - Large</a>
+      <label for="talleL">Talle L</label><br>
+  
+      <input type="radio" id="talleXL" name="talle" value="XL <a href="img/kitfem.jpg" link" target="_blank">XL -Grande</a>">
+      <label for="talleXL">Talle XL</label><br>
+  
+      <button type="submit">Enviar</button>
+  
+    </form>
         <a href="formpago.html"><button type="submit">SIGUIENTE</button></a>
         <footer id="footer" class="footer-i"></footer>
         <script src="../js/headerYFooter.js"></script>
