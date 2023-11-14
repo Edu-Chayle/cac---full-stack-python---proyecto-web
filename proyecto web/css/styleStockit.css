@@ -139,7 +139,6 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    position: relative;
     top: 16px;
     background-color: #333333;
     color: rgb(57, 154, 161);
@@ -172,7 +171,6 @@ h2 {
     }
 }    
 
-@media (min-width: 1024px) {
     .header-i {
         position: fixed;
         top: 0;
