@@ -50,9 +50,9 @@ function validarFormulario() {
         if (input.name === "numeroDocumento") {
             const tipoDocumento = document.querySelector("#select-tipo-documento").value;
 
-            if (tipoDocumento === "D" || contenidoInput === "") {
+            if (tipoDocumento === "DNI" || contenidoInput === "") {
                 validarElemento(expresiones.dni);
-            } else if (tipoDocumento === "P") {
+            } else if (tipoDocumento === "PAS") {
                 validarElemento(expresiones.pasaporte);
             }
         }
