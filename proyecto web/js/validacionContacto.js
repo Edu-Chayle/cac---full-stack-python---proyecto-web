@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll("#formulario-contacto input");
 const textarea = document.getElementById("textarea-mensaje");
 
 const expresiones = {
-    nombreYApellido: /^[a-zA-Z\s]{1,50}$/,
+    nombreYApellido: /^[a-zA-Z\u00C0-\u00FF\s]{1,50}$/,
     email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 }
 

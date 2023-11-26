@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll("#formulario-inscripcion input");
 const selects = document.querySelectorAll("#formulario-inscripcion select");
 
 const expresiones = {
-    nombresYApellidos: /^[a-zA-Z\s]{1,50}$/,
+    nombresYApellidos: /^[a-zA-Z\u00C0-\u00FF\s]{1,50}$/,
     edad: /^(1[8-9]|[2-9][0-9])$/,
     dni: /^[0-9]{7,8}$/,
     pasaporte: /^[a-zA-Z0-9\s-]{1,20}$/,
@@ -94,11 +94,34 @@ function validarFormulario() {
     return esValido;
 }
 
+function enviarFormulario(formData) {
+    fetch("http://localhost:5000/inscriptos", {
+        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: {"Content-Type": "application/json"},
+        method: "POST"
+    }).then(response => {
+        if (!response.ok) {
+            return response.json().then(errorData => {
+                throw new Error(errorData.message);
+            });
+        }
+
+        return response.json();
+    }).then(() => {
+        alert("Inscripto creado exitosamente.");
+
+        window.location.href = "../pages/stockit.html";
+    }).catch(error => {
+        alert(error.message);
+    });
+}
+
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
     if (validarFormulario()) {
-        formulario.submit();
-        window.location.href = "../pages/stockit.html";
+        const formData = new FormData(formulario);
+
+        enviarFormulario(formData);
     }
 });
