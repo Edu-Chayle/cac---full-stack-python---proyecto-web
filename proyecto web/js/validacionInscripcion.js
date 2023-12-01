@@ -95,7 +95,7 @@ function validarFormulario() {
 }
 
 function enviarFormulario(formData) {
-    fetch("http://localhost:5000/inscriptos", {
+    fetch("https://educhayle.pythonanywhere.com/inscriptos", {
         body: JSON.stringify(Object.fromEntries(formData)),
         headers: {"Content-Type": "application/json"},
         method: "POST"
