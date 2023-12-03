@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Página que permite la inscripción a un medio maratón, el cual consta de 3 diferentes circuitos, que se desarrollan en el barrio de Palermo de la ciudad de Buenos Aires.
+Sitio web que permite la inscripción a un medio maratón, el cual consta de 3 diferentes circuitos, que se desarrollan en el barrio de Palermo de la ciudad de Buenos Aires.
 
 ## Enlace
 
