@@ -101,8 +101,8 @@ function enviarFormulario(formData) {
         method: "POST"
     }).then(response => {
         if (!response.ok) {
-            return response.json().then(errorData => {
-                throw new Error(errorData.message);
+            return response.json().then(errorResponse => {
+                throw new Error(errorResponse.message);
             });
         }
 

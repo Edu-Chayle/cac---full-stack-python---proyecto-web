@@ -1,7 +1,7 @@
 const largeHeaderContent = `
 <div class="logo-y-nav-i">
     <div class="header-logo-i">
-        <a href="../index.html"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
+        <a href="https://21kmpalermo-administracion.netlify.app"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
     </div>
     <nav class="nav-i">
         <ul>
@@ -17,7 +17,7 @@ const largeHeaderContent = `
 const smallHeaderContent = `
 <div class="logo-y-nav-i">
     <div class="header-logo-i">
-        <a href="../index.html"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
+        <a href="https://21kmpalermo-administracion.netlify.app"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
     </div>
     <div class="header-arrows-i">
         <label for="input-menu"><i class="fas fa-angle-double-down"></i></label>
