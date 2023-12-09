@@ -1,0 +1,124 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: Quicksand, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+:root {
+    --color-primary: #333333;
+    --color-secondary: #ffffff;
+    --color-tertiary: #399aa1;
+    --color-quaternary: orange;
+    --color-warning: red;
+}
+
+/* Header */
+
+.header-i {
+    height: 58px;
+    width: 100%;
+    background-color: var(--color-primary);
+    z-index: 1;
+}
+
+.logo-y-nav-i {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo-i {
+    margin-left: 10px;
+    flex: 1;
+}
+
+.header-arrows-i label {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.input-menu-i {
+    display: none;
+}
+
+.input-menu-i:checked ~ .nav-list-i {
+    transform: translateY(0);
+}
+
+.nav-list-i {
+    width: 100%;
+    top: 58px;
+    background-color: var(--color-primary);
+    position: absolute;
+    transform: translateY(-100%);
+    transition: all 500ms ease;
+    z-index: -1;
+}
+
+.nav-list-i ul {
+    margin: 10px 0;
+}
+
+.nav-list-i a {
+    padding: 10px;
+    color: var(--color-secondary);
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list-i a:hover {
+    color: var(--color-quaternary);
+}
+
+.nav-i li {
+    float: left;
+    margin: 0 10px 0;
+}
+
+.nav-i a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.nav-i a:hover {
+    color: var(--color-quaternary);
+}
+
+.band-i {
+    height: 8px;
+    width: 100%;
+    background-color: var(--color-tertiary);
+}
+
+/* Footer */
+
+.footer-i {
+    font-size: 0.8rem;
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-i a {
+    margin: 0 7.5px;
+}
+
+.fa {
+    color: var(--color-secondary);
+}
