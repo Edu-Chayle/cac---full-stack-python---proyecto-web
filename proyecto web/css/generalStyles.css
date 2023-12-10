@@ -122,3 +122,23 @@ html {
 .fa {
     color: var(--color-secondary);
 }
+
+/* Responsive design */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1.25rem;
+    }
+
+    .header-i {
+        height: 80px;
+    }
+
+    .logo-y-nav-i, .footer-i {
+        height: 70px;
+    }
+
+    .band-i {
+        height: 10px;
+    }
+} 

@@ -3,16 +3,24 @@
 .body-i {
     font-family: Quicksand, sans-serif;
     font-weight: 500;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.main-i {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Form */
 
 .form-i {
     margin: 10px 15px;
-    padding: 5px 10px 10px;
+    padding: 1px 10px 11px;
     max-width: 500px;
     color: var(--color-primary);
 }
@@ -54,6 +62,10 @@
     margin: -5px 0 10px 0;
 }
 
+#input-telefono-contacto + .p-i {
+    margin-bottom: 26px;
+}
+
 .nota-i {
     font-size: 0.8rem;
     margin-bottom: 10px;
@@ -69,47 +81,28 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+input[type="submit"]:hover {
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-quaternary);
+    border: 2.6px solid var(--color-quaternary);
+}
+
 /* Responsive design */
 
 @media (min-width: 768px) {
-    html {
-        font-size: 1.25rem;
-    }
-
-    .header-i {
-        min-height: 80px;
-    }
-
-    .logo-y-nav-i, .footer-i {
-        min-height: 70px;
-    }
-
-    .band-i {
-        height: 10px;
-    }
-
     .form-i {
         max-width: 600px;
     }
-}    
+
+    .label-i {
+        font-size: 1rem;
+    }
+}
 
 @media (min-width: 1024px) {
-    .body-i {
-        justify-content: center;
-    }
-
-    .header-i {
-        position: fixed;
-        top: 0;
-    }
-
-    .band-i {
-        position: fixed;
-        top: 70px;
-    }
-
     .form-i {
-        margin: 85px 0 15px;
+        margin: 0;
         padding: 5px 10px 18px;
         min-width: 1000px;
         max-width: 1280px;
@@ -123,7 +116,7 @@ input[type="submit"] {
     }
 
     .input-i {
-        padding: 5px 2.5px;
+        padding: 5px 4px;
     }
 
     .select-i {
@@ -131,7 +124,7 @@ input[type="submit"] {
     }
 
     .container-nota-i {
-        height: 327px;
+        height: 319px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -139,21 +132,6 @@ input[type="submit"] {
 
     .container-nota-i > p {
         margin-bottom: 30px;
-    }
-}
-
-@media ((min-width: 1024px) and (min-height: 912px)) or (min-height: 1181px) {
-    .body-i {
-        min-height: 100vh;
-    }
-
-    .form-i {
-        margin: 0;
-    }
-
-    .footer-i {
-        position: fixed;
-        bottom: 0;
     }
 }
 
