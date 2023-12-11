@@ -22,41 +22,41 @@ html {
 
 /* Header */
 
-.header-i {
+.header {
     height: 58px;
     width: 100%;
     background-color: var(--color-primary);
     z-index: 1;
 }
 
-.logo-y-nav-i {
+.header-container {
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 
-.header-logo-i {
-    margin-left: 10px;
+.header-logo {
+    margin: 1px 0 0 10px;
     flex: 1;
 }
 
-.header-arrows-i label {
+.header-arrows label {
     font-size: 2rem;
     margin-right: 10px;
     color: var(--color-secondary);
     cursor: pointer;
 }
 
-.input-menu-i {
+.input-menu {
     display: none;
 }
 
-.input-menu-i:checked ~ .nav-list-i {
-    transform: translateY(0);
+.input-menu:checked ~ .nav-list {
+    transform: translateY(-8%);
 }
 
-.nav-list-i {
+.nav-list {
     width: 100%;
     top: 58px;
     background-color: var(--color-primary);
@@ -66,56 +66,66 @@ html {
     z-index: -1;
 }
 
-.nav-list-i ul {
+.nav-list ul {
     margin: 10px 0;
 }
 
-.nav-list-i a {
+.nav-list a {
     padding: 10px;
     color: var(--color-secondary);
     text-decoration: none;
     display: block;
 }
 
-.nav-list-i a:hover {
+.header-arrows label:hover, .nav-list a:hover, .nav a:hover {
     color: var(--color-quaternary);
 }
 
-.nav-i li {
+.nav li {
     float: left;
     margin: 0 10px 0;
 }
 
-.nav-i a {
+.nav a {
     color: var(--color-secondary);
     text-decoration: none;
 }
 
-.nav-i a:hover {
-    color: var(--color-quaternary);
-}
-
-.band-i {
+.band {
     height: 8px;
     width: 100%;
+    top: 0;
     background-color: var(--color-tertiary);
+    position: relative;    
+    transition: top 500ms ease;
+}
+
+/* Main */
+
+main {
+    top: 0;
+    position: relative;
+    transition: top 500ms ease;
 }
 
 /* Footer */
 
-.footer-i {
+.footer {
     font-size: 0.8rem;
     height: 50px;
     width: 100%;
+    top: 0;
     background-color: var(--color-primary);
     color: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    transition: top 500ms ease;
 }
 
-.footer-i a {
+.footer a {
     margin: 0 7.5px;
 }
 
@@ -130,15 +140,21 @@ html {
         font-size: 1.25rem;
     }
 
-    .header-i {
+    .header {
         height: 80px;
     }
 
-    .logo-y-nav-i, .footer-i {
+    .header-container, .footer {
         height: 70px;
     }
 
-    .band-i {
+    .band {
         height: 10px;
     }
-} 
+}
+
+/* Clases para estados */
+
+.active {
+    color: var(--color-quaternary);
+}
