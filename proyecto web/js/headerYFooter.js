@@ -45,7 +45,7 @@ const footerContent = `
 `;
 
 function updateHeader() {
-    if (window.innerWidth < 375) {
+    if (window.innerWidth <= 414) {
         document.getElementById("header").innerHTML = smallHeaderContent;
     } else {
         document.getElementById("header").innerHTML = largeHeaderContent;

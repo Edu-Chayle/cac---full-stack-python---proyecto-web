@@ -27,7 +27,7 @@ function validarFormulario() {
     for (const input of inputs) {
         const contenidoInput = input.value.trim();
 
-        function validarElemento (expresion) {
+        function validarDato(expresion) {
             if (!expresion.test(contenidoInput)) {
                 input.classList.add("input-error");
                 input.setAttribute("placeholder", mensajesDeAyuda[input.name]);
@@ -40,25 +40,25 @@ function validarFormulario() {
 
         if (input.name === "nombre" || input.name === "apellido" || 
             input.name === "coberturaMedica" || input.name === "nombreContacto") {
-            validarElemento(expresiones.nombresYApellidos);
+                validarDato(expresiones.nombresYApellidos);
         }
 
         if (input.name === "edad") {
-            validarElemento(expresiones.edad);   
+            validarDato(expresiones.edad);   
         }
 
         if (input.name === "numeroDocumento") {
             const tipoDocumento = document.querySelector("#select-tipo-documento").value;
 
             if (tipoDocumento === "DNI" || contenidoInput === "") {
-                validarElemento(expresiones.dni);
+                validarDato(expresiones.dni);
             } else if (tipoDocumento === "PAS") {
-                validarElemento(expresiones.pasaporte);
+                validarDato(expresiones.pasaporte);
             }
         }
 
         if (input.name === "telefono" || input.name === "telefonoContacto") {
-            validarElemento(expresiones.telefonos);
+            validarDato(expresiones.telefonos);
         }
 
         input.addEventListener("input", () => {
@@ -98,7 +98,7 @@ function enviarFormulario(formData) {
     fetch("https://educhayle.pythonanywhere.com/inscriptos", {
         body: JSON.stringify(Object.fromEntries(formData)),
         headers: {"Content-Type": "application/json"},
-        method: "POST"
+        method: "post"
     }).then(response => {
         if (!response.ok) {
             return response.json().then(errorResponse => {
