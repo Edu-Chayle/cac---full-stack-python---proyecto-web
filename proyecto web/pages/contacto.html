@@ -5,29 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>21 km Palermo</title>
         <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/contacto.css">
+        <link rel="stylesheet" href="../css/contactoStyles.css">
         <script src="https://kit.fontawesome.com/91669f9d31.js" crossorigin="anonymous"></script>
     </head>
     <body class="body-c">
-        <header id="header" class="header-i"></header>
-        <div class="img-container-c">
-            <div class="form-container-c">
-                <div class="title-container-c">
-                    <h1 class="title-c">¡Contactanos si tenes dudas!</h1>
+        <header id="header" class="header"></header>
+        <main class="main-c">
+            <div class="img-container-c">
+                <div class="form-container-c">
+                    <div class="title-container-c">
+                        <h1 class="title-c">¡Contactanos si tenes dudas!</h1>
+                    </div>
+                    <form id="formulario-contacto" class="form-c" action="" method="post">
+                        <label class="label-c" for="input-nombre-y-apellido">Nombre y apellido: <span class="span-c">*</span></label>
+                        <input id="input-nombre-y-apellido" class="input-c" type="text" name="nombreYApellido">
+                        <label class="label-c" for="input-email">Correo electrónico: <span class="span-c">*</span></label>
+                        <input id="input-email" class="input-c" type="email" name="email">
+                        <label class="label-c" for="textarea-mensaje">Mensaje: <span class="span-c">*</span></label>
+                        <textarea id="textarea-mensaje" class="textarea-c" rows="5" name="mensaje"></textarea>
+                        <input type="submit" value="ENVIAR">
+                    </form>
                 </div>
-                <form id="formulario-contacto" class="form-c" action="" method="POST">
-                    <label class="label-c" for="input-nombre-y-apellido">Nombre y apellido: <span class="span-c">*</span></label>
-                    <input id="input-nombre-y-apellido" class="input-c" type="text" name="nombreYApellido">
-                    <label class="label-c" for="input-email">Correo electrónico: <span class="span-c">*</span></label>
-                    <input id="input-email" class="input-c" type="email" name="email">
-                    <label class="label-c" for="textarea-mensaje">Mensaje: <span class="span-c">*</span></label>
-                    <textarea id="textarea-mensaje" class="textarea-c" rows="5" name="mensaje"></textarea>
-                    <input class="" type="submit" value="ENVIAR">
-                </form>
             </div>
-        </div>
-        <footer id="footer" class="footer-i"></footer>
+        </main>
+        <footer id="footer" class="footer"></footer>
         <script src="../js/headerYFooter.js"></script>
+        <script src="../js/contactoStyles.js"></script>
         <script src="../js/validarContacto.js"></script>
     </body>
 </html>

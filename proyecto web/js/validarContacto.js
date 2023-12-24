@@ -20,7 +20,7 @@ function validarFormulario() {
     for (const input of inputs) {
         const contenidoInput = input.value.trim();
         
-        function validarElemento (expresion) {
+        function validarDato(expresion) {
             if (!expresion.test(contenidoInput)) {
                 input.classList.add("input-error");
                 input.setAttribute("placeholder", mensajesDeAyuda[input.name]);
@@ -32,11 +32,11 @@ function validarFormulario() {
         }
 
         if (input.name === "nombreYApellido") {
-            validarElemento(expresiones.nombreYApellido);
+            validarDato(expresiones.nombreYApellido);
         }
 
         if (input.name === "email") {
-            validarElemento(expresiones.email);   
+            validarDato(expresiones.email);   
         }
 
         input.addEventListener("input", () => {
