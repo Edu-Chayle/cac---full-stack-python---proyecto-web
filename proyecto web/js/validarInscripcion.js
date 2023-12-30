@@ -116,8 +116,8 @@ function enviarFormulario(formData) {
     });
 }
 
-formulario.addEventListener("submit", (evento) => {
-    evento.preventDefault();
+formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
 
     if (validarFormulario()) {
         const formData = new FormData(formulario);

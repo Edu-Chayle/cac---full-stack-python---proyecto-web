@@ -76,8 +76,8 @@ function validarFormulario() {
     return esValido;
 }
 
-formulario.addEventListener("submit", (evento) => {
-    evento.preventDefault();
+formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
 
     if (validarFormulario()) {
         formulario.submit();

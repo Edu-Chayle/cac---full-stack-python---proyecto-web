@@ -31,7 +31,7 @@ const smallHeaderContent = `
         </ul>
     </nav>
 </div>
-<div class="band"></div>
+<div class="band movable-element"></div>
 `;
 
 const footerContent = `
@@ -57,23 +57,78 @@ window.addEventListener("resize", updateHeader);
 
 document.getElementById("footer").innerHTML = footerContent;
 
-document.addEventListener("change", function(event) {
+let elementScrollingDisabled = true;
+
+document.addEventListener("change", (event) => {
     if (event.target.matches("#input-menu")) {
         const arrows = document.querySelector(".fas");
-        const band = document.querySelector(".band");
-        const main = document.querySelector("main");
-        const footer = document.querySelector("footer");
+        const movableElements = document.querySelectorAll(".movable-element");
 
         if (event.target.checked) {
-            arrows.classList.add("active");
-            band.style.top = "126px";
-            main.style.top = "126px";
-            footer.style.top = "126px";
+            arrows.classList.add("active-arrows");
+
+            movableElements.forEach(element => {
+                element.style.transform = "translateY(126px)";
+            });
+
+            elementScrollingDisabled = false;
         } else {
-            arrows.classList.remove("active");
-            band.style.top = "0";
-            main.style.top = "0";
-            footer.style.top = "0";
+            arrows.classList.remove("active-arrows");
+
+            movableElements.forEach(element => {
+                element.style.transform = "none";
+            });
+        }
+    }
+});
+
+document.addEventListener("click", (event) => {
+    const header = document.querySelector(".header");
+    const arrows = document.querySelector(".fas");
+    const inputMenu = document.getElementById("input-menu");
+    const movableElements = document.querySelectorAll(".movable-element");
+
+    if (!header.contains(event.target)) {
+        arrows.classList.remove("active-arrows");
+
+        inputMenu.checked = false;
+
+        movableElements.forEach(element => {
+            element.style.transform = "none";
+        });
+
+        elementScrollingDisabled = true;
+    }
+});
+
+let startY = 0;
+let endY = 0;
+
+document.addEventListener("touchstart", (event) => {
+    startY = event.touches[0].clientY;
+});
+
+document.addEventListener("touchend", (event) => {
+    endY = event.changedTouches[0].clientY;
+
+    const deltaY = startY - endY;
+
+    if (deltaY > 10 && !elementScrollingDisabled) {
+        const header = document.querySelector(".header");
+        const arrows = document.querySelector(".fas");
+        const inputMenu = document.getElementById("input-menu");
+        const movableElements = document.querySelectorAll(".movable-element");
+
+        if (!header.contains(event.target)) {
+            arrows.classList.remove("active-arrows");
+
+            inputMenu.checked = false;
+
+            movableElements.forEach((element) => {
+                element.style.transform = "none";
+            });
+
+            elementScrollingDisabled = true;
         }
     }
 });
