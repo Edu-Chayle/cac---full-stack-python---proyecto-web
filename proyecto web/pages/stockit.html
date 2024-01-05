@@ -5,62 +5,144 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>21 km Palermo</title>
         <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/styleStockit.css">
+        <link rel="stylesheet" href="../css/stockitStyles.css">
         <script src="https://kit.fontawesome.com/91669f9d31.js" crossorigin="anonymous"></script>
-        <script>
-          function validarFormulario() {
-            var seleccionado = document.querySelector('input[name="talle"]:checked');
-            if (seleccionado) {
-              alert("Has elegido el kit de ropa en el tamaño: " + seleccionado.value);
-            } else {
-              alert("Por favor, selecciona un tamaño");
-            }
-          }
-        </script>
     </head>
-    <body>
-        <header id="header" class="header-i"></header>
-        <h2><em>HOMBRE</em></h2>
-        <h2> kits </h2>
-  
-  <form onsubmit="event.preventDefault(); validarFormulario();">
-    <h3>Selecciona un tamaño:</h3>
-    
-    <input type="radio" id="talleS" name="talle" value="S" <a href="img/kitmasc.jpg"  link" target="_blank">S - Small</a>>
-    <label for="talleS">Talle S</label><br>
-
-    <input type="radio" id="talleM" name="talle" value="M" <a href= "img/kitmasc.jpg"  link" target="_blank">M - Medium</a>>
-    <label for="talleM">Talle M</label><br>
-
-    <input type="radio" id="talleL" name="talle" value="L"  <a href="img/kitmasc.jpg"  link" target="_blank">L - Large</a>>
-    <label for="talleL">Talle L</label><br>
-
-    <input type="radio" id="talleXL" name="talle" value="XL 
-        <a href="img/kitmasc.jpg"  link" target="_blank">XL -Grande</a>">
-    <label for="talleXL">Talle XL</label><br>
-
-    <button type="submit">Enviar</button>
-
-    <form onsubmit="event.preventDefault(); validarFormulario();">
-      <h3>Selecciona un tamaño:</h3>
-      
-      <input type="radio" id="talleS" name="talle" value="S"  <a href="img/kitfem.jpg"  link" target="_blank">S - Small</a>
-      <label for="talleS">Talle S</label><br>
-  
-      <input type="radio" id="talleM" name="talle" value="M" <a href= "img/kitfem.jpg" link" target="_blank">M - Medium</a>
-      <label for="talleM">Talle M</label><br>
-  
-      <input type="radio" id="talleL" name="talle" value="L"  <a href="img/kitfem.jpg"  link" target="_blank">L - Large</a>
-      <label for="talleL">Talle L</label><br>
-  
-      <input type="radio" id="talleXL" name="talle" value="XL <a href="img/kitfem.jpg" link" target="_blank">XL -Grande</a>">
-      <label for="talleXL">Talle XL</label><br>
-  
-      <button type="submit">Enviar</button>
-  
-    </form>
-        <a href="formpago.html"><button type="submit">SIGUIENTE</button></a>
-        <footer id="footer" class="footer-i"></footer>
+    <body class="body-s">
+        <header id="header" class="header"></header>
+        <main class="main-s movable-element">
+            <form id="formulario-stockit" class="form-s" action="" method="post">
+                <div class="div-s">
+                    <h1 class="h1-s">¡Elegí tu kit!</h1>
+                    <h2 class="h2-s">Conjunto deportivo ecológico</h2>
+                    <div class="img-container-s">
+                        <img class="img-s" src="../img/img-kit.jpg" alt="Remera y pantalón corto deportivos">
+                        <p class="p-s">Prendas elaboradas con telas de poliéster reciclado. Este material da un segundo uso a envases PET.</p>
+                    </div>
+                    <h2 class="h2-s">Tabla de talles: Remera</h2>
+                    <table class="table-s">
+                        <thead class="thead-s">
+                            <tr>
+                                <th>Talles</th>
+                                <th>Largo</th>
+                                <th>Pecho</th>
+                                <th>Cintura</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-s">
+                            <tr>
+                                <td>XS</td>
+                                <td>65</td>
+                                <td>44</td>
+                                <th>45</th>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>69</td>
+                                <td>49</td>
+                                <th>50</th>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>73</td>
+                                <td>53</td>
+                                <th>54</th>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>76</td>
+                                <td>58</td>
+                                <th>59</th>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>79</td>
+                                <td>62</td>
+                                <th>63</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="div-s">
+                    <h2 class="h2-s">Tabla de talles: Pantalón corto</h2>
+                    <table class="table-s">
+                        <thead class="thead-s">
+                            <tr>
+                                <th>Talles</th>
+                                <th>Cintura</th>
+                                <th>Largo</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-s">
+                            <tr>
+                                <td>XS</td>
+                                <td>44</td>
+                                <th>43</th>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>49</td>
+                                <th>43,5</th>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>53</td>
+                                <th>44</th>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>58</td>
+                                <th>45,5</th>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>62</td>
+                                <th>47</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <label class="label-s" for="input-talle">Talle: <span class="span-s">*</span></label>
+                    <select id="input-talle" class="select-s" name="talle">
+                        <option value="" selected="">Seleccione un talle</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <h2 class="h2-s">Puntos de retiro del kit</h2>
+                    <div class="point-container">
+                        <h3 class="h3-s">Punto 1:</h3>
+                        <ul class="ul-s">
+                            <li><span class="span-li-s">Dirección:</span> Avenida Uno 1234.</li>
+                            <li><span class="span-li-s">Fecha:</span> Desde el 25 de septiembre al 5 noviembre de 2023.</li>
+                            <li><span class="span-li-s">Horarios:</span> Lunes a viernes de 10 a 16 hs.</li>
+                        </ul>
+                        <h3 class="h3-s">Punto 2:</h3>
+                        <ul class="ul-s">
+                            <li><span class="span-li-s">Dirección:</span> Avenida Dos 1234.</li>
+                            <li><span class="span-li-s">Fecha:</span> Desde el 25 de septiembre al 8 noviembre de 2023.</li>
+                            <li><span class="span-li-s">Horarios:</span> Lunes a viernes de 9 a 18 hs.</li>
+                        </ul>
+                        <h3 class="h3-s">Punto 3:</h3>
+                        <ul class="ul-s">
+                            <li><span class="span-li-s">Dirección:</span> Avenida Tres 1234.</li>
+                            <li><span class="span-li-s">Fecha:</span> Desde el 25 de septiembre al 10 noviembre de 2023.</li>
+                            <li><span class="span-li-s">Horarios:</span> Lunes a viernes de 14 a 21 hs.</li>
+                        </ul>
+                    </div>
+                    <label class="label-s" for="input-puntos-retiro">Puntos de retiro: <span class="span-s">*</span></label>
+                    <select id="input-puntos-retiro" class="select-s" name="puntosRetiro">
+                        <option value="" selected="">Seleccione un punto de retiro</option>
+                        <option value="P1">Punto 1</option>
+                        <option value="P2">Punto 2</option>
+                        <option value="P3">Punto 3</option>
+                    </select>
+                    <input class="input-s" type="submit" value="SIGUIENTE">
+                </div>
+            </form>
+        </main>
+        <footer id="footer" class="footer movable-element"></footer>
         <script src="../js/headerYFooter.js"></script>
     </body>
 </html>

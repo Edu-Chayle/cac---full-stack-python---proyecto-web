@@ -61,7 +61,7 @@
     border: 2.6px solid var(--color-tertiary);
 }
 
-.input-i:focus, .textarea-c:focus {
+.input-c:focus, .textarea-c:focus {
     outline-color: var(--color-quaternary);;
 }
 
