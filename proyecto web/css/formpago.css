@@ -1,140 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Quicksand, sans-serif;
-}
-
-/* General: Header */
-
-.header {
-    height: 58px;
-    width: 100%;
-    background-color: #333333;
-    z-index: 1;
-}
-
-.header-container {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-logo {
-    margin-left: 10px;
-    flex: 1;
-}
-
-.header-arrows label {
-    font-size: 2rem;
-    margin-right: 10px;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.input-menu {
-    display: none;
-}
-
-.input-menu:checked ~ .nav-list {
-    transform: translateY(0);
-}
-
-.nav-list {
-    width: 100%;
-    top: 58px;
-    background-color: #333333;
-    position: absolute;
-    transform: translateY(-100%);
-    transition: all 500ms ease;
-    z-index: -1;
-}
-
-.nav-list ul {
-    margin: 10px 0;
-}
-
-.nav-list a {
-    padding: 10px;
-    color: #ffffff;
-    text-decoration: none;
-    display: block;
-}
-
-.nav-list a:hover {
-    color: orange;
-}
-
-.nav li {
-    float: left;
-    margin: 0 10px 0;
-}
-
-.nav a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.nav a:hover {
-    color: orange;
-}
-
-.band {
-    height: 8px;
-    width: 100%;
-    background-color: #399aa1;
-}
-
-/* General: Footer */
-
-.footer {
-    font-size: 0.8rem;
-    height: 50px;
-    width: 100%;
-    background-color: #333333;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer a {
-    margin: 0 7.5px;
-}
-
-.fa {
-    color: #ffffff;
-}
+@import "generalStyles.css";
 
 body {
+    font-family: Quicksand, sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-image: url("../img/running_16x9_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*
-.headeritem {
+
+.main-f {
+    flex-grow: 1;
     display: flex;
-    background-color: #46bac2;
-    font-size: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
-
-ul {
-    display: flex;
-    margin: 1rem;
-    list-style: none;
-}
-
-li {
-    margin: 0 10px 0;
-}*/
 
 section {
     display: grid;
@@ -143,6 +26,14 @@ section {
     background-color: rgba(245, 245, 245, 0.699);
     margin: 0.5rem;
     padding: 0.5rem;
+    max-width: 1500px;
+}
+
+.h2-f {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 18px 0;
+    color: var(--color-tertiary);
 }
 
 .items-tarjetas {
@@ -159,38 +50,55 @@ select {
     width: max-content;
 }
 
-label {
-    font-size: 1.5em;
+.label-f {
+    font-weight: 700;
 }
 
-.titulo_info_titular,
+.input-f {
+    padding: 2px 4px;
+}
+
+.select-f {
+    padding: 1px 0;
+    background-color: var(--color-secondary);
+}
+
+.input-f, .select-f {
+    margin: 5px 0 10px;
+    color: var(--color-tertiary);
+    border-radius: 5px;
+    border: 2.6px solid var(--color-tertiary);
+}
+
+.input-f:focus, .select-s:focus {
+    outline-color: var(--color-quaternary);
+}
+
 .fec_expiracion,
-.sel_tarjeta,
 .total_abonar {
-    color: blue;
+    font-weight: 700;
+    color: var(--color-primary);
     width: max-content;
 }
 
-
-input {
-    border-style: solid;
-    border-radius: 5px;
+.span-f {
+    color: var(--color-warning);
 }
 
 button {
-    border-radius: 1rem;
-    color: white;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    padding: 3.5px 8px;
+    color: var(--color-secondary);
+    background-color: var(--color-tertiary);
+    border-radius: 5px;
+    border: 2.6px solid var(--color-tertiary);
+    cursor: pointer;
 }
 
-.btn_enviar {
-    background-color: rgb(0, 110, 255);
-    color: black;
-}
-
-.btn_borrar {
-    color: black;
+button:hover {
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-quaternary);
+    border: 2.6px solid var(--color-quaternary);
 }
 
 .tarjeta_backend_desactiva {
@@ -209,89 +117,81 @@ button {
 
 .alerta_numero_tarjeta {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_desde_fecha {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_hasta_fecha {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_nom {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_ape {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_dni {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_ult_num {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red;
 }
 
 .alerta_tipo_tarjeta {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red
 }
 
 .alerta_tarifa_abonar {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red
 }
 
 .alerta_select {
     visibility: hidden;
+    font-size: 0.8rem;
     color: red
 }
-
-
-/*
-.footeritem {
-    display: flex;
-    justify-content: center;
-    background-color: #37af65;
-    color: #ffffff;
-}*/
-
-
 
 /* Extra small devices (600px and down) */
 
 @media (max-width: 600px) {
 
     .mainitem,
-    .headeritem,
-    a,
     form,
-    section,
-    .footeritem {
+    section {
         display: flex;
         flex-wrap: wrap;
         width: auto;
         height: auto;
     }
 
-    .titulo_info_titular,
     .fec_expiracion,
-    .sel_tarjeta,
     .total_abonar,
-    label,
-    button {
-        font-size: 1rem;
-        color: blue;
+    label {
+        color: var(--color-primary);
         width: max-content;
     }
 
@@ -300,10 +200,6 @@ button {
         height: 50%;
     }
 
-    svg {
-        width: 20%;
-        height: 30%;
-    }
 
 
 }
@@ -313,6 +209,39 @@ button {
     #tfrontend, #tback {
         width: 70%;
         height: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .label-f {
+        font-size: 1rem;
+    }
+
+    .select-i {
+        padding: 1.1px 0;
+    }
+
+    button {
+        padding: 4px 8px;
+    }
+}
+
+@media (min-width: 1024px) and (max-height: 1365px) {
+    .input-f {
+        padding: 5px 4px;
+    }
+
+    .select-f {
+        padding: 4px 0;
+    }
+
+    .input-f, .select-f {
+        border-radius: 7.5px;
+    }
+
+    button {
+        padding: 7px 15px;
+        border-radius: 7.5px;
     }
 }
 
