@@ -67,7 +67,7 @@ function updateHeaderLinks() {
     const imagePath = document.querySelector(".header-logo img");
     const linkList = document.querySelector(".link-list");
 
-    if (!actualPage.includes("index.html")) {
+    if (actualPage !== "/" && !actualPage.includes("index.html")) {
         imagePath.src = "../img/header-logo.png";
         linkList.innerHTML = linkListContent;
     }
@@ -80,7 +80,9 @@ function updateActivePage() {
     links.forEach(link => {
         const linkPath = link.getAttribute("href");
 
-        if (actualPage.includes(linkPath)) {
+        if ((actualPage === "/" || actualPage.includes("index.html")) && linkPath === "index.html") {
+            link.classList.add("active-page");
+        } else if (actualPage.includes(linkPath)) {
             link.classList.add("active-page");
         }
     });
