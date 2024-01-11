@@ -1,13 +1,13 @@
 const largeHeaderContent = `
 <div class="header-container">
     <div class="header-logo">
-        <a href="https://21kmpalermo-administracion.netlify.app"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
+        <a href="https://21kmpalermo-administracion.netlify.app"><img src="img/header-logo.png" alt="Logo 21 km Palermo"></a>
     </div>
     <nav class="nav">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="inscripcion.html">Inscripción</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+        <ul class="link-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/inscripcion.html">Inscripción</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
         </ul>
     </nav>
 </div>
@@ -17,21 +17,27 @@ const largeHeaderContent = `
 const smallHeaderContent = `
 <div class="header-container">
     <div class="header-logo">
-        <a href="https://21kmpalermo-administracion.netlify.app"><img src="../img/header-logo.png" alt="Logo 21 km Palermo"></a>
+        <a href="https://21kmpalermo-administracion.netlify.app"><img src="img/header-logo.png" alt="Logo 21 km Palermo"></a>
     </div>
     <div class="header-arrows">
         <label for="input-menu"><i class="fas fa-angle-double-down"></i></label>
     </div>
     <input id="input-menu" class="input-menu" type="checkbox" name="menu">
     <nav class="nav-list">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="inscripcion.html">Inscripción</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+        <ul class="link-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/inscripcion.html">Inscripción</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
         </ul>
     </nav>
 </div>
 <div class="band movable-element"></div>
+`;
+
+const linkListContent = `
+<li><a href="../index.html">Inicio</a></li>
+<li><a href="inscripcion.html">Inscripción</a></li>
+<li><a href="contacto.html">Contacto</a></li>
 `;
 
 const footerContent = `
@@ -54,6 +60,30 @@ function updateHeader() {
     } else {
         document.getElementById("header").innerHTML = largeHeaderContent;
     }
+}
+
+function updateHeaderLinks() {
+    const actualPage = window.location.pathname;
+    const imagePath = document.querySelector(".header-logo img");
+    const linkList = document.querySelector(".link-list");
+
+    if (!actualPage.includes("index.html")) {
+        imagePath.src = "../img/header-logo.png";
+        linkList.innerHTML = linkListContent;
+    }
+}
+
+function updateActivePage() {
+    const actualPage = window.location.pathname;
+    const links = document.querySelectorAll(".link-list a");
+
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href");
+
+        if (actualPage.includes(linkPath)) {
+            link.classList.add("active-page");
+        }
+    });
 }
 
 function trasladarElementosAlActivarODesactivarCheckbox() {
@@ -136,10 +166,18 @@ function trasladarElementosAlActivarODesactivarCheckbox() {
     }
 }
 
-window.addEventListener("load", updateHeader);
-window.addEventListener("resize", updateHeader);
-
 document.getElementById("footer").innerHTML = footerContent;
 
-window.addEventListener("load", trasladarElementosAlActivarODesactivarCheckbox);
-window.addEventListener("resize", trasladarElementosAlActivarODesactivarCheckbox);
+window.addEventListener("load", () => {
+    updateHeader();
+    updateHeaderLinks();
+    updateActivePage();
+    trasladarElementosAlActivarODesactivarCheckbox();
+});
+
+window.addEventListener("resize", () => {
+    updateHeader();
+    updateHeaderLinks();
+    updateActivePage();
+    trasladarElementosAlActivarODesactivarCheckbox();
+});

@@ -54,9 +54,9 @@ html {
 
 .nav-list {
     width: 100%;
-    top: 58px;
     background-color: var(--color-primary);
     position: absolute;
+    top: 58px;
     transform: translateY(-100%);
     transition: all 500ms ease-in-out;
     z-index: -1;
@@ -152,4 +152,8 @@ main {
 .active-arrows {
     color: var(--color-quaternary);
     transform: rotate(180deg);
+}
+
+.active-page {
+    color: var(--color-quaternary) !important;
 }

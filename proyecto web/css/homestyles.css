@@ -1,93 +1,117 @@
-@import "reset.css";
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
-
-* {
-    font-size: 0.85rem;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 1rem;
-}
+@import "generalStyles.css";
 
 section {
     display: block;
 }
 
 body {
-    background: #ffffff;
-    color: #474747;
     font-family: Quicksand, sans-serif;
     font-weight: 500;
-    line-height: 1.65em;
-}
-
-/* General: Header */
-
-.header-i {
-    line-height: normal;
-    font-size: 0.85rem;
-    height: 58px;
-    width: 100%;
-    background-color: #333333;
-    z-index: 1;
-}
-
-.logo-y-nav-i {
-    height: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
-.header-logo-i {
-    margin-left: 10px;
-    flex: 1;
-}
-
-.header-arrows-i label {
-    font-size: 2rem;
-    margin-right: 10px;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.nav-i li {
-    float: left;
-    margin: 0 10px 0;
-}
-
-.nav-i a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.nav-i a:hover {
-    color: orange;
-}
-
-.band-i {
-    height: 8px;
+.main-index {
     width: 100%;
-    background-color: #399aa1;
 }
 
-/**/
+#banner {
+    background-image: url("../img/runners.jpeg");
+    background-position: center center;
+    background-size: 30em;
+    height: 28em;
+    text-align: center;
+    position: relative;
+}
 
-h1, h2, h3 {
-    color: inherit;
+.img-container-index {
+    height: 445px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-logo-index {
+    width: 70%;
+    max-width: 1000px;
+}
+
+#banner .banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(27, 27, 27, 0.75);
+    color: var(--color-secondary);
+    padding: 1.5em 0;
+}
+
+#banner div h2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.25em;
+    vertical-align: middle;
+}
+
+#banner div h2 em {
+    opacity: 0.75;
+}
+
+#banner div .button {
+    vertical-align: middle;
+    margin-left: 1em;
+}
+
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: var(--color-tertiary);
+    border-radius: 5px;
+    border: 0;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 1.5em;
+    line-height: 2.75em;
+    min-width: 9em;
+    text-align: center;
+    text-decoration: none;
     font-weight: 600;
+    letter-spacing: -0.025em;
+    transition: 0.2s ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
+}
+
+.button:hover {
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-quaternary);
+}
+
+.button.solid {
+    font-weight: 900;
+}
+
+.button.brands {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+
+h2, h3 {
+    font-weight: bold;
     line-height: 1.75em;
     margin-bottom: 1em;
 }
 
-h1 a, h2 a, h3 a {
-    color: #399aa1;
+h2 a {
+    color: var(--color-tertiary);
     text-decoration: none;
 }
 
-h1 em, h2 em, h3 em {
+h2 em {
     font-style: normal;
     font-weight: 300;
 }
@@ -105,60 +129,50 @@ h3 {
 .container {
     margin: 0 auto;
     max-width: 100%;
-    width: 1400px;
+    width: 1200px;
 }
 
-/* General: Footer */
-
-.footer-i {
-    line-height: normal;
-    font-size: 0.8rem;
-    height: 50px;
-    width: 100%;
-    background-color: #333333;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.wrapper {
+    padding: 3em 0 1px 0;
 }
 
-.footer-i a {
-    margin: 0 7.5px;
+.container h3 {
+    color: var(--color-tertiary);
 }
 
-.fa {
-    color: #ffffff;
+.wrapper.style2 h2 {
+    color: var(--color-tertiary);
 }
 
-/**/
 
-:root {
-    --col-width: 8.33333%;
-    --off-width: 8.33333%;
-    --gutter: 60px;
-    --max-width: 100%;
-}
-
-.row {
+.wrapper.style1 {
+    background-color: var(--color-secondary);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
 }
 
-.image {
-    border: 0;
-    display: inline-block;
-    position: relative;
-    border-radius: 5px;
+.wrapper.style2 {
+    background-color: var(--color-secondary);
+    text-align: center;
 }
 
-.image.left {
-    display: block;
-    float: left;
-    margin: 0 2em 2em 0;
-    position: relative;
-    top: 0.25em;
+.wrapper.style3 {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+}
+
+.wrapper.style3 .button {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.wrapper.style3 .button:hover {
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-quaternary);
+}
+
+div.major {  
+    margin: 0 0 2em 0;
 }
 
 .icon {
@@ -199,14 +213,14 @@ h3 {
 .icon.major {
     text-align: center;
     cursor: default;
-    background-color: #399aa1;
-    color: #fff;
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
     border-radius: 100%;
     display: inline-block;
     width: 5em;
     height: 5em;
     line-height: 5em;
-    box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+    box-shadow: 0 0 0 7px var(--color-secondary), 0 0 0 8px var(--color-tertiary);
     margin: 0 0 2em 0;
 }
 
@@ -214,343 +228,112 @@ h3 {
    font-size: 36px;
 }
 
-/* Box */
-
 .box {
     text-align: center;
 }
 
-.box p {
-    text-align: left;
-}
-
-.box.highlight {
-    text-align: center;
-    position: relative;
-    padding-left: 7em;
-}
-
-.box.post {
-    position: space-between;
-    margin: 0 0 2em 0;
-}
-
-.wrapper {
-    padding: 3em 0 3em 0;
-}
-
-.wrapper.style1 {
-    background: #fff;
-    text-align: left;
-    display: grid;
-}
-
-.wrapper.style2 {
-    background-color: #fff;
-    text-align: center;
-}
-
-.wrapper.style3 {
-    background-color: #399aa1;
-    color: #fff;
-}
-
-.wrapper.style3 .button {
-    background: #fff;
-    color: #474747;
-}
-
-.wrapper.style3 .button:hover {
-    color: #37c0fb !important;
-}
-
-#banner {
-    background-image: url("../img/runners.jpeg");
-    background-position: center center;
-    background-size: 30em;
-    height: 28em;
-    text-align: center;
-    position: relative;
-}
-
-#banner header {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #212121;
-    background: rgba(27, 27, 27, 0.75);
-    color: #fff;
-    padding: 1.5em 0;
-}
-
-#banner header h2 {
-    display: inline-block;
-    margin: 0;
-    font-size: 1.25em;
-    vertical-align: middle;
-}
-
-#banner header h2 em {
-    opacity: 0.75;
-}
-
-#banner header h2 a {
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-}
-
-#banner header h2 a:hover {
-    border-bottom-color: transparent;
-}
-
-#banner header .button {
-    vertical-align: middle;
-    margin-left: 1em;
-}
-
-.button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    background-color: #399aa1;
-    border-radius: 5px;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 1.5em;
-    line-height: 2.75em;
-    min-width: 9em;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    transition: 0.2s ease-in-out, color 0.2s ease-in-out, 0.2s ease-in-out;
-}
-
-.button:hover {
-    color: #fff;
-    background-color: #37c0fb;
-}
-
-.button.solid {
-    font-weight: 900;
-}
-
-.button.brands {
-    font-family: 'Font Awesome 5 Brands';
-}
-
-.box.highlight i {
-    position: absolute;
-    margin: 0;
-    left: 0;
-    top: 0.25em;
-}
-.box.post .inner {
-    margin-left: 2em;
-}
-
-.box.post .image {
-    width: 20%;
+.img-index {
+    height: 183px;
+    width: 275px;
 }
 
 #cta {
+    margin: 2em 0;
     text-align: center;
-    padding: 3.5em 0;
+    padding: 3em 0;
 }
 
-#cta header h2 {
+#cta div h2 {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
 }
 
-#cta header .button {
+#cta div .button {
     vertical-align: middle;
     margin-left: 1em;
 }
 
-@media screen and (max-width: 1680px) {
-    .container {
-        width: 1200px;
-    }
-
-    :root {
-        --col-width: 16.66667%;
-        --off-width: 16.66667%;
-        --gutter: 80px;
-    }
+iframe {
+    margin: 10px auto;
+    height: 400px;
+    width: 100%;
+    display: block;
 }
 
-@media screen and (max-width: 1280px) {
-    .container {
-        width: 960px;
-    }
-
-    :root {
-        --col-width: 25%;
-        --off-width: 25%;
-        --gutter: 60px;
-    }
-}
-
-@media screen and (max-width: 980px), (max-width: 840px) {
-    .container {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 1400px) {
     .container {
         width: 90%;
     }
-
-    :root {
-        --col-width: 50%;
-        --off-width: 50%;
-        --gutter: 40px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .container {
-        width: 100%;
-    }
-
-    :root {
-        --col-width: 100%;
-        --off-width: 100%;
-        --gutter: 40px;
-    }
-}
-  
-@media screen and (max-width: 980px) {
-    :root {
-        --col-width: 33.33333%;
-        --off-width: 33.33333%;
-        --gutter: 60px;
-    }
-}
-  
-@media screen and (max-width: 840px) {
-    :root {
-        --col-width: 41.66667%;
-        --off-width: 41.66667%;
-        --gutter: 60px;
-    }
-}
-
-@media screen and (max-width: 1680px) {
-    #banner {
-        height: 24em;
-    }
 }
 
 @media screen and (max-width: 1280px) {
-    body {
-        font-size: 13px;
-    }
-    
-    #banner {
-        height: 20em;
-    }
-    
-    .wrapper {
-        padding: 3em 0 1em 0;
-    }
-
     #cta {
         padding: 2em 0;
     }
+
+    iframe {
+        height: 350px;
+    }
 }
 
-@media screen and (max-width: 980px) {
-    body {
-        font-size: 12px;
+@media screen and (min-width: 1024px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 }
 
 @media screen and (max-width: 840px) {
-    body {
-        font-size: 13px;
+    .img-container-index {
+        height: 240px;
     }
 
-    h1, h2, h3 {
+    h2, h3 {
         margin-bottom: 0.5em;
     }
 
-    header p {
-        margin-top: -0.75em;
-    }
-
-    header.major {
-        text-align: center;
-        margin: 0 0 2em 0;
-    }
-
-    header.major h2 {
+    div.major h2 {
         font-size: 1.75em;
-    }
-
-    header.major p {
-        top: -0.25em;
-        font-size: 1.25em;
-    }
-
-    .box.highlight {
-        text-align: left;
-        position: relative;
-        padding-left: 7em;
-    }
-
-    .box.highlight i {
-        position: absolute;
-        margin: 0;
-        left: 0;
-        top: 0.25em;
-    }
-
-    .box.post .inner {
-        margin-left: 2em;
-    }
-
-    .box.post .image {
-        width: 20%;
     }
 
     #banner {
         height: 20em;
     }
 
-    #banner header h2 {
+    #banner div h2 {
+        font-size: 1em;
         display: block;
     }
 
-    #banner header .button {
-        margin: 1em 0 0 0;
+    #banner div .button {
+        margin: 0.5em 0 0 0;
     }
 
-    #cta {
-        padding: 1.5em 0;
+    iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-index {
+        font-size: 1rem;
     }
 
-    #cta header h2 {
-        display: block;
+    .img-index {
+        height: 200px;
+        width: 301px;
     }
+}
 
-    #cta header .button {
-        margin: 1em 0 0 0;
+@media screen and (max-width: 767px) {
+    .img-container-index {
+        height: 169.45px;
     }
 }
 
 @media screen and (max-width: 736px) {
-    body {
-        font-size: 11px;
-        line-height: 1.35em;
-    }
-
     h2 {
         font-size: 1.25em;
         letter-spacing: 0;
@@ -563,88 +346,77 @@ h3 {
         line-height: 1.35em;
     }
 
-    header p {
-        margin-top: -0.5em;
-        font-size: 1em;
-    }
-
-    header.major {
-        padding: 0 20px;
-    }
-
-    header.major h2 {
-        font-size: 1.25em;
-    }
-
-    header.major p {
-        top: 0;
-        margin-top: 1.25em;
-        font-size: 1em;
-    }
-
-    #banner {
-        height: 18em;
-    }
-
     .wrapper {
         padding: 2em 0 1px 0;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .icon.major {
-        width: 4em;
-        height: 4em;
-        line-height: 4em;
-        box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
-    }
-
-    .icon.major:before {
-        font-size: 24px;
-    }
-
-    button, .button {
-        width: 100%;
+@media screen and (min-width: 710px) {
+    .image.left {
         display: block;
+        float: left;
+        margin: 0 2em 0 0;
+        position: relative;
+        top: 0.25em;
     }
+}
 
-    .box.highlight {
-        padding-left: 2em;
-    }
-
-    .box.post .inner {
-        margin-left: 20px;
-    }
-
-    .box.post .image {
-        width: 20%;
-    }
-    #banner {
-        height: 20em;
-    }
-
-    #banner header {
-        padding: 20px;
-    }
-
-    .wrapper {
-        padding: 2em 20px 1px 20px;
+@media screen and (max-width: 710px) {
+    .inner {
+        text-align: center;
     }
 
     #cta {
         padding: 20px;
     }
+
+    #cta div h2 {
+        display: block;
+    }
+
+    #cta div .button {
+        margin: 1em 0 0 0;
+    }
 }
 
-@media screen and (min-width: 1681px) {
-    .container {
-        max-width: 1600px;
+@media screen and (max-width: 500px) {
+    .box {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .icon p:last-child {
+        margin-bottom: 100px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.25em;
+    #banner {
+        height: 20em;
+    }
+
+    #banner .banner {
+        padding: 20px;
+    }
+
+    #banner div h2 {
+        font-size: 1em;
+    }
+
+    #banner div .button {
+        margin: 0.5em 0 0 0;
+    }
+
+    .button {
+        width: 100%;
+        display: block;
     }
 
     h2 {
@@ -654,26 +426,7 @@ h3 {
     h3 {
         font-size: 0.875em;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .row > .col {
-        width: 100%;
-    }
-
-    .row > .off {
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .button {
-        font-size: 1em;
-        padding: 0.5em 1.5em;
-    }
-}
-
-@media screen and (max-width: 480px) {
     .icon.major {
         width: 3em;
         height: 3em;
@@ -685,16 +438,9 @@ h3 {
     }
 }
 
-@media screen and (max-width: 480px) {
-    #banner {
-        height: 16em;
-    }
-
-    #banner header h2 {
-        font-size: 1em;
-    }
-
-    #banner header .button {
-        margin: 0.5em 0 0 0;
+@media screen and (max-width: 280px) {
+    .img-index {
+        height: 183px;
+        width: 100%;
     }
 }
