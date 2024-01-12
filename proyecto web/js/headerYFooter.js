@@ -78,9 +78,9 @@ function updateActivePage() {
     const links = document.querySelectorAll(".link-list a");
 
     links.forEach(link => {
-        const linkPath = link.getAttribute("href");
+        const linkPath = link.getAttribute("href").replace(".html", "");
 
-        if ((actualPage === "/" || actualPage.includes("index.html")) && linkPath === "index.html") {
+        if ((actualPage === "/" || actualPage.includes("index.html")) && linkPath === "index") {
             link.classList.add("active-page");
         } else if (actualPage.includes(linkPath)) {
             link.classList.add("active-page");
